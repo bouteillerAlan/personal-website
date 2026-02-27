@@ -423,6 +423,16 @@ a.hovered > span::before, #email.hovered::before {
     margin-top: 5rem;
 }
 
+#sideProject .spd {
+    grid-column: 3/6;
+    margin-top: 5rem;
+}
+
+#sideProject .spe {
+    grid-column: 7/10;
+    margin-top: 5rem;
+}
+
 /* let's talk */
 #contact > .title {
     margin-bottom: 10rem;

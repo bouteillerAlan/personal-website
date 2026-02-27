@@ -243,14 +243,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let introUndEntrance = gsap.timeline();
         const introWords = intro.textContent.split(' ');
         intro.innerHTML = introWords.map((word) => {
-            if (word === 'Product') {
-                return `<span class='letter underlined easterEgg pm easter-pointer' emoji='🚀'>${word}</span>`
-            } else if (word === 'Manager,' && !winIsSmallerThan600) {
-                return `<span class='letter easterEgg easter-pointer' emoji='🚀'>${word}</span>`
-            } else if (word === 'Manager,' && winIsSmallerThan600) {
-                return `<span class='letter underlined easterEgg easter-pointer' emoji='🚀'>${word}</span>`
-            } else if (word === 'dev.') {
+            if (word === 'developer,') {
                 return `<span class='letter underlined easterEgg dev easter-pointer' emoji='🧑‍💻'>${word}</span>`
+            } else if (word === 'product.') {
+                return `<span class='letter underlined easterEgg pm easter-pointer' emoji='🚀'>${word}</span>`
             } else if (word === 'innovation,') {
                 return `<span class='letter underlined easterEgg inno easter-pointer' emoji='💥'>${word}</span>`
             } else if (word === 'tech,') {
@@ -268,9 +264,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 introEntrance.to(e, {y: 0, stagger: 0.05, autoAlpha: 1, duration: speedDuration, ease: 'expoScale(0.5,7,none)'}, `<${0.03}`);
             }
             if (e.classList.contains('pm')) {
-                introUndEntrance.to(e, {'--pm-dur': `${!winIsSmallerThan600 ? 200 : 80}%`, stagger: 0.05, autoAlpha: 1, duration: speedDuration, ease: 'expoScale(0.5,7,none)'});
+                introUndEntrance.to(e, {'--pm-dur': '95%', stagger: 0.05, autoAlpha: 1, duration: speedDuration, ease: 'expoScale(0.5,7,none)'});
             } else if (e.classList.contains('dev')) {
-                introUndEntrance.to(e, {'--dev-dur': '80%', stagger: 0.05, autoAlpha: 1, duration: speedDuration, ease: 'expoScale(0.5,7,none)'});
+                introUndEntrance.to(e, {'--dev-dur': '95%', stagger: 0.05, autoAlpha: 1, duration: speedDuration, ease: 'expoScale(0.5,7,none)'});
             } else if (e.classList.contains('underlined')) {
                 introUndEntrance.to(e, {'--und-dur': '95%', stagger: 0.05, autoAlpha: 1, duration: speedDuration, ease: 'expoScale(0.5,7,none)'});
             }
