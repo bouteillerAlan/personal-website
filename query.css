@@ -68,6 +68,14 @@ html {
         grid-column: 8/12;
     }
 
+    #sideProject .spd {
+        grid-column: 3/7;
+    }
+
+    #sideProject .spe {
+        grid-column: 8/12;
+    }
+
 }
 
 @media (min-width: 800px) and (max-width: 973px) {
@@ -131,6 +139,8 @@ html {
     #sideProject .spa,
     #sideProject .spb,
     #sideProject .spc,
+    #sideProject .spd,
+    #sideProject .spe,
     .title > p,
     #email-container
     {
